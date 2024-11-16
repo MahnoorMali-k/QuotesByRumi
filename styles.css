@@ -1,0 +1,129 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Georgia', serif;
+    color: #fff;
+}
+
+/* Welcome Section */
+.welcome-section {
+    width: 100%;
+    height: 100vh; /* Full height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* For absolute positioning of background images */
+    text-align: center;
+}
+
+/* Title Styles */
+.welcome-section h1 {
+    font-size: 2.5rem;
+    color: #ffffff; /* Green */
+    margin-bottom: 10px;
+    position: relative; /* Ensure it stacks correctly */
+    z-index: 3; /* Bring it above the overlays */
+}
+
+/* Paragraph Styles */
+.welcome-section p {
+    font-size: 1.2rem;
+    color: #c6ff42ef; /* Brown */
+    font-style: oblique;
+    position: relative; /* Ensure it stacks correctly */
+    z-index: 3; /* Bring it above the overlays */
+}
+
+/* Background Image with Transparency */
+.welcome-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('WhiteRoses.png'); /* Replace with your white roses image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Adjust the opacity for transparency */
+    z-index: 1; /* Keep it behind the text */
+}
+
+/* Green Overlay for the Background Image */
+.welcome-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 65, 14, 0.5); /* Green with transparency */
+    z-index: 2; /* Keep it above the background image but below the text */
+}
+
+/* Quotes Section */
+.quotes-section {
+    width: 100%;
+    min-height: 100vh; /* Full height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* For absolute positioning of background images */
+    overflow: hidden; /* Hide overflow */
+    padding: 20px; /* Add padding */
+    text-align: center;
+    background-color: rgba(207, 223, 208, 0.5); /* Green with transparency */
+}
+
+/* Quote Heading */
+.quotes-heading {
+    font-size: 2rem;
+    color: #4CAF50; /* Green */
+    margin-bottom: 20px;
+}
+
+/* Quote Container */
+.quote-container {
+    position: relative;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* White background with transparency */
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 600px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Flower Image for Quote Background */
+.flower-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3; /* Light transparency for background image */
+    border-radius: 15px;
+}
+
+/* Quote Text */
+.quote-text {
+    font-size: 1.5rem;
+    color: #000; /* Black for quote text */
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #222;
+    color: #b0a597;
+}
